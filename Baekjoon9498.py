@@ -1,11 +1,11 @@
-grade = int(input())
-if grade >= 90 and grade <= 100:
+score = int(input())
+if score >= 90 and score <= 100:
     print('A')
-elif grade >= 80:
+elif score >= 80:
     print('B')
-elif grade >= 70:
+elif score >= 70:
     print('C')
-elif grade >= 60:
+elif score >= 60:
     print('D')
 else:
     print('F')
