@@ -2,25 +2,27 @@ import sys
 
 N = int(sys.stdin.readline())
 
-map = [0] * N
+row = [0] * N
+
 result = 0
 
-def can_put(x):
-    for i in range(x):
-        if map[x] == map[i] or abs(map[x] - map[i]) == abs(x - i):
+def can_put(column):
+    for i in range(column):
+        if row[column] == row[i] or abs(row[column] - row[i]) == abs(column - i):
             return False
     return True
 
-def recursive(x):
+def dfs(column):
     global result
-    if x == N:
+
+    if column == N:
         result += 1
         return
 
     for i in range(N):
-        map[x] = i
-        if can_put(x):
-            recursive(x + 1)
+        row[column] = i
+        if can_put(column):
+            dfs(column + 1)
 
-recursive(0)
+dfs(0)
 print(result)
