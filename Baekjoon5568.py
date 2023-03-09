@@ -83,3 +83,20 @@ cards = [input().rstrip() for _ in range(n)]
 res = set()
 for per in permutataions(cards, k):
     res.add(''.join(per))
+
+
+
+
+# from itertools import permutations
+
+# n = int(input())
+# k = int(input())
+# array = []
+
+# for _ in range(n):
+#     array.append(int(input()))
+
+# perm = permutations(array, k)
+# set_array = set(array)
+# array = list(array)
+# print(len(array))
